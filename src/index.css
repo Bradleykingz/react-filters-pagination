@@ -1,3 +1,5 @@
+@import "~bulma/css/bulma.min.css";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 8px;
+}
+
+.product {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 8px;
 }
