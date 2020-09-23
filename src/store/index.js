@@ -148,6 +148,8 @@ const filterStore = (state = initialState, action) => {
             }
 
             loadNewPageState.filteredProducts = nextProducts;
+            // Don't use window.history.pushState() here in production
+            // It's better to keep redirections predictable
             window.history.pushState({page: 1}, "title 1", `?page=${loadNewPageState.currentPage}`);
             return loadNewPageState;
         case LOAD_EXACT_PAGE:
